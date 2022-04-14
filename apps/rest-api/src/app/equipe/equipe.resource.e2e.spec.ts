@@ -165,6 +165,7 @@ describe('Equipes', () => {
   describe('UPDATE /equipes', () => {
     // it('UPDATE should update data', (done) => {
     //   const updateTeamRequest: EquipeEntity = {
+
     //     teamName: 'toto',
     //   };
     //   request(app.getHttpServer())
