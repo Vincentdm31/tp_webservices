@@ -57,7 +57,7 @@ describe('Equipes', () => {
           expect(response.body.id).toBeTruthy();
           expect(response).toBeDefined();
           done();
-        })
+        });
     });
     it('POST should fail if teamName is empty', (done) => {
       const createTeamRequest: EquipeEntity = {
@@ -70,12 +70,13 @@ describe('Equipes', () => {
           expect(response.status).toBe(400);
           expect(response).toBeDefined();
           done();
-        })
+        });
     });
     it('POST should fail if string > 31 carac', (done) => {
       const createTeamRequest: EquipeEntity = {
         teamName: new Array(31).fill('a').join(''),
       };
+      //test
       request(app.getHttpServer())
         .post('/equipes')
         .send(createTeamRequest)
@@ -83,11 +84,11 @@ describe('Equipes', () => {
           expect(response.status).toBe(400);
           expect(response).toBeDefined();
           done();
-        })
+        });
     });
     it('POST should fail if teamName =! string', (done) => {
       const createTeamRequest = {
-        teamName: 4
+        teamName: 4,
       };
       request(app.getHttpServer())
         .post('/equipes')
@@ -96,7 +97,7 @@ describe('Equipes', () => {
           expect(response.status).toBe(400);
           expect(response).toBeDefined();
           done();
-        })
+        });
     });
   });
 
@@ -109,7 +110,7 @@ describe('Equipes', () => {
           expect(response.status).toBe(200);
           expect(Array.isArray(response.body)).toBeTruthy();
           done();
-        })
+        });
     });
     it(' GET should resolve a page', (done) => {
       request(app.getHttpServer())
@@ -120,7 +121,7 @@ describe('Equipes', () => {
           expect(response.body.length).toBe(3);
           expect(response.body[0].teamName).toBe('Equipe 1');
           done();
-        })
+        });
     });
     it('GET should resolve 1 data', (done) => {
       request(app.getHttpServer())
@@ -131,7 +132,7 @@ describe('Equipes', () => {
           //expect(response.body.length).toBe(1);
           expect(response.body.teamName).toBe('Equipe 4');
           done();
-        })
+        });
     });
   });
 
@@ -143,17 +144,23 @@ describe('Equipes', () => {
           expect(response.status).toBe(204);
           expect(response).toBeDefined();
           done();
-        })
+        });
     });
-  it('DELETE should fail 404', (done) => {
-    request(app.getHttpServer())
-      .delete(`/teams/${Array.from(entityId).splice(0, entityId.length - 1).join('') + 'a'}`)
-      .then((response) => {
-        expect(response.status).toBe(404);
-        expect(response).toBeDefined();
-        done();
-      })
-  });
+    it('DELETE should fail 404', (done) => {
+      request(app.getHttpServer())
+        .delete(
+          `/teams/${
+            Array.from(entityId)
+              .splice(0, entityId.length - 1)
+              .join('') + 'a'
+          }`
+        )
+        .then((response) => {
+          expect(response.status).toBe(404);
+          expect(response).toBeDefined();
+          done();
+        });
+    });
   });
   describe('UPDATE /equipes', () => {
     it('UPDATE should update data', (done) => {
@@ -170,7 +177,7 @@ describe('Equipes', () => {
           expect(response.body.id).toBeTruthy();
           expect(response).toBeDefined();
           done();
-        })
+        });
     });
 
     it('UPDATE should fail if teamName is empty', (done) => {
@@ -184,7 +191,7 @@ describe('Equipes', () => {
           expect(response.status).toBe(400);
           expect(response).toBeDefined();
           done();
-        })
+        });
     });
 
     it('UPDATE should fail if teamName > 30 carac', (done) => {
@@ -198,7 +205,7 @@ describe('Equipes', () => {
           expect(response.status).toBe(400);
           expect(response).toBeDefined();
           done();
-        })
+        });
     });
 
     it('UPDATE should fail if teamName is not a string', (done) => {
@@ -212,7 +219,7 @@ describe('Equipes', () => {
           expect(response.status).toBe(400);
           expect(response).toBeDefined();
           done();
-        })
+        });
     });
   });
 });
