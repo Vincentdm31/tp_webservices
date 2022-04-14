@@ -30,8 +30,8 @@ async function bootstrap() {
     })
   );
   const config = new DocumentBuilder()
-    .setTitle('RenduTp')
-    .setDescription('RenduTp Desc')
+    .setTitle('NestVins')
+    .setDescription('Nestvins')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
