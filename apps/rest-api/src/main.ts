@@ -31,7 +31,7 @@ async function bootstrap() {
   );
   const config = new DocumentBuilder()
     .setTitle('NestVins')
-    .setDescription('nest')
+    .setDescription('nestt')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
