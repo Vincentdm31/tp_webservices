@@ -207,7 +207,7 @@ describe('Equipes', () => {
           done();
         });
     });
-    it('DELETE should fail 404', (done) => {
+    it('DELETE shozuld fail 404', (done) => {
       request(app.getHttpServer())
         .delete(
           `/teams/${
