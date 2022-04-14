@@ -1,0 +1,41 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@rendu-tp0/api/core/error": ["libs/api/core/error/src/index.ts"],
+      "@rendu-tp0/api/core/pagination": [
+        "libs/api/core/pagination/src/index.ts"
+      ],
+      "@rendu-tp0/api/repository/error": [
+        "libs/api/repository/error/src/index.ts"
+      ],
+      "@rendu-tp0/api/validation/id": ["libs/api/validation/id/src/index.ts"],
+      "@rendu-tp0/common/resource/core": [
+        "libs/common/resource/core/src/index.ts"
+      ],
+      "@rendu-tp0/common/resource/equipe": [
+        "libs/common/resource/equipe/src/index.ts"
+      ],
+      "@rendu-tp0/common/resource/error": [
+        "libs/common/resource/error/src/index.ts"
+      ],
+      "@rendu-tp0/common/resource/match": [
+        "libs/common/resource/match/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

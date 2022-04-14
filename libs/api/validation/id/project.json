@@ -1,0 +1,22 @@
+{
+  "root": "libs/api/validation/id",
+  "sourceRoot": "libs/api/validation/id/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/validation/id/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/validation/id"],
+      "options": {
+        "jestConfig": "libs/api/validation/id/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
