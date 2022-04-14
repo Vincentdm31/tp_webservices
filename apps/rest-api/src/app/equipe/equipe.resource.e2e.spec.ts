@@ -136,50 +136,23 @@ describe('Equipes', () => {
     });
   });
 
-  describe('DELETE /equipes', () => {
-    it('DELETE should remove data', (done) => {
-      request(app.getHttpServer())
-        .delete(`/equipes/${entityId}`)
-        .then((response) => {
-          expect(response.status).toBe(204);
-          expect(response).toBeDefined();
-          done();
-        });
-    });
-    it('DELETE should fail 404', (done) => {
-      request(app.getHttpServer())
-        .delete(
-          `/teams/${
-            Array.from(entityId)
-              .splice(0, entityId.length - 1)
-              .join('') + 'a'
-          }`
-        )
-        .then((response) => {
-          expect(response.status).toBe(404);
-          expect(response).toBeDefined();
-          done();
-        });
-    });
-  });
   describe('UPDATE /equipes', () => {
-    // it('UPDATE should update data', (done) => {
-    //   const updateTeamRequest: EquipeEntity = {
-
-    //     teamName: 'toto',
-    //   };
-    //   request(app.getHttpServer())
-    //     .patch(`/equipes/${entityId}`)
-    //     .send(updateTeamRequest)
-    //     .then((response) => {
-    //       expect(response.status).toBe(200);
-    //       expect(response.body).toMatchObject(updateTeamRequest);
-    //       expect(response.body.id).toBeDefined();
-    //       expect(response.body.id).toBeTruthy();
-    //       expect(response).toBeDefined();
-    //       done();
-    //     });
-    // });
+    it('UPDATE should update data', (done) => {
+      const updateTeamRequest: EquipeEntity = {
+        teamName: 'toto',
+      };
+      request(app.getHttpServer())
+        .patch(`/equipes/${entityId}`)
+        .send(updateTeamRequest)
+        .then((response) => {
+          expect(response.status).toBe(200);
+          expect(response.body).toMatchObject(updateTeamRequest);
+          expect(response.body.id).toBeDefined();
+          expect(response.body.id).toBeTruthy();
+          expect(response).toBeDefined();
+          done();
+        });
+    });
 
     it('UPDATE should fail if teamName is empty', (done) => {
       const updateTeamRequest: EquipeEntity = {
@@ -218,6 +191,33 @@ describe('Equipes', () => {
         .send(updateTeamRequest)
         .then((response) => {
           expect(response.status).toBe(400);
+          expect(response).toBeDefined();
+          done();
+        });
+    });
+  });
+
+  describe('DELETE /equipes', () => {
+    it('DELETE should remove data', (done) => {
+      request(app.getHttpServer())
+        .delete(`/equipes/${entityId}`)
+        .then((response) => {
+          expect(response.status).toBe(204);
+          expect(response).toBeDefined();
+          done();
+        });
+    });
+    it('DELETE should fail 404', (done) => {
+      request(app.getHttpServer())
+        .delete(
+          `/teams/${
+            Array.from(entityId)
+              .splice(0, entityId.length - 1)
+              .join('') + 'a'
+          }`
+        )
+        .then((response) => {
+          expect(response.status).toBe(404);
           expect(response).toBeDefined();
           done();
         });
