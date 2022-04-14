@@ -163,22 +163,22 @@ describe('Equipes', () => {
     });
   });
   describe('UPDATE /equipes', () => {
-    it('UPDATE should update data', (done) => {
-      const updateTeamRequest: EquipeEntity = {
-        teamName: 'toto',
-      };
-      request(app.getHttpServer())
-        .patch(`/equipes/${entityId}`)
-        .send(updateTeamRequest)
-        .then((response) => {
-          expect(response.status).toBe(200);
-          expect(response.body).toMatchObject(updateTeamRequest);
-          expect(response.body.id).toBeDefined();
-          expect(response.body.id).toBeTruthy();
-          expect(response).toBeDefined();
-          done();
-        });
-    });
+    // it('UPDATE should update data', (done) => {
+    //   const updateTeamRequest: EquipeEntity = {
+    //     teamName: 'toto',
+    //   };
+    //   request(app.getHttpServer())
+    //     .patch(`/equipes/${entityId}`)
+    //     .send(updateTeamRequest)
+    //     .then((response) => {
+    //       expect(response.status).toBe(200);
+    //       expect(response.body).toMatchObject(updateTeamRequest);
+    //       expect(response.body.id).toBeDefined();
+    //       expect(response.body.id).toBeTruthy();
+    //       expect(response).toBeDefined();
+    //       done();
+    //     });
+    // });
 
     it('UPDATE should fail if teamName is empty', (done) => {
       const updateTeamRequest: EquipeEntity = {
