@@ -19,6 +19,7 @@ export const matchExample: MatchDto = {
   awayTeamName: 'Inter Milan',
   homeTeamScore: 0,
   awayTeamScore: 1,
+  externalId: 4525252352352,
 };
 
 export class ApiMatchDto implements MatchDto {
@@ -39,6 +40,7 @@ export class ApiMatchDto implements MatchDto {
     minimum: 0,
   })
   awayTeamScore: number;
+  externalId: number;
 }
 
 export class ApiMatchCreateDto

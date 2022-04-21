@@ -5,6 +5,7 @@ export interface MatchDto {
   awayTeamName: string;
   homeTeamScore: number;
   awayTeamScore: number;
+  externalId: number;
 }
 
 // type with all properties from MatchDto, excluding id

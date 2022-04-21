@@ -27,6 +27,7 @@ export class MatchValidationDto implements MatchDto {
   @IsString() awayTeamName: string;
   @IsInt() @Min(0) homeTeamScore: number;
   @IsInt() @Min(0) awayTeamScore: number;
+  externalId: number;
 }
 
 export class MatchCreateValidationDto

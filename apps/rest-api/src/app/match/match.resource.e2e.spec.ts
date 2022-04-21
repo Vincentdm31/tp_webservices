@@ -183,14 +183,13 @@ describe('Matchs', () => {
           done();
         });
     });
-    it('GET should resolve 1 data', (done) => {
+    it('fetch matches', () => {
       request(app.getHttpServer())
-        .get(`/matchs/${entityId}`)
+        .get(`/matchs/refresh/fetch`)
         .then((response) => {
           expect(response).toBeDefined();
           expect(response.status).toBe(200);
-          expect(response.body.homeTeamName).toBe('TOTO0');
-          done();
+          expect(response.body).toBe('done');
         });
     });
   });
@@ -310,6 +309,17 @@ describe('Matchs', () => {
         .then((response) => {
           expect(response.status).toBe(400);
           expect(response).toBeDefined();
+          done();
+        });
+    });
+
+    //
+    it('should fetch match', (done) => {
+      request(app.getHttpServer())
+        .get(`/matchs/refresh/fetch`)
+        .then((res) => {
+          expect(res.status).toBe(200);
+          expect(res).toBeDefined();
           done();
         });
     });

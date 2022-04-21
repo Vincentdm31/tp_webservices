@@ -8,6 +8,7 @@ export class MatchEntity {
   @Prop() awayTeamName: string;
   @Prop() homeTeamScore: number;
   @Prop() awayTeamScore: number;
+  @Prop() externalId: number;
 }
 
 export type MatchEntityWithId = MatchEntity & Pick<Document, 'id'>;

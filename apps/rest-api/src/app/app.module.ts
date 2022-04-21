@@ -8,6 +8,7 @@ import { WinstonModule } from 'nest-winston';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { environment } from '../environments/environment';
 import { ClientCacheInterceptor } from './client-cache.interceptor';
+import { ScheduleModule } from '@nestjs/schedule';
 
 export const mongoDbUri = function (configService: ConfigService) {
   const username = configService.get('DATABASE_USERNAME');
@@ -24,6 +25,7 @@ export const mongoDbUri = function (configService: ConfigService) {
     ConfigModule.forRoot({
       envFilePath: environment.filePath,
     }),
+    ScheduleModule.forRoot(),
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: mongoDbUri,

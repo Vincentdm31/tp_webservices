@@ -35,6 +35,7 @@ describe('MatchService', () => {
               awayTeamName: 'Equipe 2',
               homeTeamScore: 1,
               awayTeamScore: 2,
+              externalId: 345345345,
             },
             {
               id: '',
@@ -43,6 +44,7 @@ describe('MatchService', () => {
               awayTeamName: 'Equipe 4',
               homeTeamScore: 1,
               awayTeamScore: 2,
+              externalId: 345345345,
             },
           ];
           mockingoose(modelMock)
@@ -96,6 +98,7 @@ describe('MatchService', () => {
         awayTeamName: 'Equipe 2',
         homeTeamScore: 1,
         awayTeamScore: 2,
+        externalId: 345345345,
       });
 
       const result = service.findAll(

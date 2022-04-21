@@ -5,7 +5,7 @@ import {
   MatchUpdateDto,
 } from '@rendu-tp0/common/resource/match';
 import { MatchDocument, MatchEntity, MatchEntityWithId } from './match.entity';
-import {Logger} from "@nestjs/common";
+import { Logger } from '@nestjs/common';
 
 const logMapper = new Logger('LogMapper');
 
@@ -21,6 +21,7 @@ export const matchDocumentToDto = (document: MatchDocument): MatchDto => {
     awayTeamName: document.awayTeamName,
     homeTeamScore: document.homeTeamScore,
     awayTeamScore: document.awayTeamScore,
+    externalId: document.externalId,
   };
 };
 
@@ -35,10 +36,13 @@ export const matchCreateDtoToEntity = (dto: MatchCreateDto): MatchEntity => {
     awayTeamName: dto.awayTeamName,
     homeTeamScore: dto.homeTeamScore,
     awayTeamScore: dto.awayTeamScore,
+    externalId: dto.externalId,
   };
 };
 
-export const matchUpdateDtoToEntity = (dto: MatchUpdateDto): MatchEntityWithId => {
+export const matchUpdateDtoToEntity = (
+  dto: MatchUpdateDto
+): MatchEntityWithId => {
   logMapper.debug('matchUpdateDtoToEntity is find');
   logMapper.log('matchUpdateDtoToEntity is find');
   logMapper.warn('matchUpdateDtoToEntity is find');
@@ -50,10 +54,13 @@ export const matchUpdateDtoToEntity = (dto: MatchUpdateDto): MatchEntityWithId =
     awayTeamName: dto.awayTeamName,
     homeTeamScore: dto.homeTeamScore,
     awayTeamScore: dto.awayTeamScore,
+    externalId: dto.externalId,
   };
 };
 
-export const matchResetDtoToEntity = (dto: MatchResetDto): MatchEntityWithId => {
+export const matchResetDtoToEntity = (
+  dto: MatchResetDto
+): MatchEntityWithId => {
   logMapper.debug('matchResetDtoToEntity is find');
   logMapper.log('matchResetDtoToEntity is find');
   logMapper.warn('matchResetDtoToEntity is find');
@@ -65,5 +72,6 @@ export const matchResetDtoToEntity = (dto: MatchResetDto): MatchEntityWithId => 
     awayTeamName: dto.awayTeamName ?? null,
     homeTeamScore: dto.homeTeamScore ?? null,
     awayTeamScore: dto.awayTeamScore ?? null,
+    externalId: dto.externalId ?? null,
   };
 };

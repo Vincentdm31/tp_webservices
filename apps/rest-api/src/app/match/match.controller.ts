@@ -38,7 +38,17 @@ import {
   MatchResetValidationDto,
   MatchUpdateValidationDto,
 } from './match.validation';
-import {IsDate, IsInt, IsNumber, IsOptional, IsString, Max, MaxLength, Min, MinLength} from 'class-validator';
+import {
+  IsDate,
+  IsInt,
+  IsNumber,
+  IsOptional,
+  IsString,
+  Max,
+  MaxLength,
+  Min,
+  MinLength,
+} from 'class-validator';
 import { Type as TypeTransformer } from 'class-transformer';
 import { CacheInterceptor, UseInterceptors } from '@nestjs/common';
 
@@ -68,7 +78,6 @@ export interface PostParams {
   awayTeamName?: string;
   homeTeamScore?: number;
   awayTeamScore?: number;
-
 }
 
 export class PostParamsValidation implements PostParams {
@@ -135,10 +144,15 @@ export class MatchController {
   @ApiCreatedResponse({ type: ApiMatchDto })
   @ApiBadRequestResponse()
   @UseInterceptors(CacheInterceptor)
-  create(@Body(new ValidationPipe({
-    transform: true,
-    expectedType: PostParamsValidation,
-  })) dto: MatchCreateValidationDto): Promise<MatchDto> {
+  create(
+    @Body(
+      new ValidationPipe({
+        transform: true,
+        expectedType: PostParamsValidation,
+      })
+    )
+    dto: MatchCreateValidationDto
+  ): Promise<MatchDto> {
     return this.matchService.create(dto);
   }
 
@@ -185,10 +199,13 @@ export class MatchController {
   @UseInterceptors(CacheInterceptor)
   update(
     @Param('id', IsObjectIdPipe) id: string,
-    @Body(new ValidationPipe({
-      transform: true,
-      expectedType: PostParamsValidation,
-    })) dto: MatchUpdateValidationDto
+    @Body(
+      new ValidationPipe({
+        transform: true,
+        expectedType: PostParamsValidation,
+      })
+    )
+    dto: MatchUpdateValidationDto
   ): Promise<MatchDto> {
     return this.matchService.update({ ...dto, id });
   }
@@ -216,5 +233,10 @@ export class MatchController {
   @UseInterceptors(CacheInterceptor)
   remove(@Param('id', IsObjectIdPipe) id: string): Promise<void> {
     return this.matchService.remove(id);
+  }
+
+  @Get('/refresh/fetch')
+  fetchMatches() {
+    return this.matchService.getLastDates();
   }
 }

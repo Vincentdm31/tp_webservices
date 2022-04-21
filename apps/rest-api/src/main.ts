@@ -2,6 +2,7 @@
  * This is not a production server yet!
  * This is only a minimal backend to get started.
  */
+import { NodeType, parse } from 'node-html-parser';
 
 import { apiPathPrefix } from '@rendu-tp0/common/resource/core';
 import { Logger } from '@nestjs/common';
@@ -13,6 +14,7 @@ import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 import * as expressWinston from 'express-winston';
 import * as compression from 'compression';
 import helmet from 'helmet';
+import axios from 'axios';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);

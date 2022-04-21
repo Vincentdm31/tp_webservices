@@ -140,6 +140,7 @@
       },
       "tags": []
     },
+
     "common-resource-match": {
       "root": "libs/common/resource/match",
       "sourceRoot": "libs/common/resource/match/src",
