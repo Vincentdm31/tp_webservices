@@ -166,13 +166,12 @@ export class MatchService {
           this.insertGame(game);
         });
       })
-      .catch((err) => console.error(err));
+      .catch((err) => err);
   }
 
   // @Cron('30 3 * * 1,3,5')
   async getLastDates(date = '', count = 0, total = 10): Promise<any> {
     if (count >= total) {
-      console.log(count);
       return count;
     }
 
@@ -191,7 +190,7 @@ export class MatchService {
       .then((date) => {
         this.fetchMatchs(date).then(() => this.getLastDates(date, count + 1));
       })
-      .catch((err) => console.error(err));
+      .catch((err) => err);
   }
 
   insertGame(game) {
@@ -209,7 +208,6 @@ export class MatchService {
 
   async TESTgetLastDates(date = '', count = 0, total = 10): Promise<any> {
     if (count >= total) {
-      console.log(count);
       return count;
     }
 
@@ -226,6 +224,64 @@ export class MatchService {
         return date;
       })
       .then((e) => e)
-      .catch((err) => console.error(err));
+      .catch((err) => err);
+  }
+
+  TESTfetchMatchs(date: string) {
+    const months = [
+      'janvier',
+      'février',
+      'mars',
+      'avril',
+      'mai',
+      'juin',
+      'juillet',
+      'aout',
+      'septembre',
+      'octobre',
+      'novembre',
+      'décembre',
+    ];
+
+    const url = `https://www.matchendirect.fr/europe/ligue-des-champions-uefa/${date}`;
+    return axios
+      .get(url)
+      .then((r) => r.data)
+      .then((html) => parse(html))
+      .then((html) => html.querySelector('.table-hover'))
+      .then((elements) => Array.from(elements?.childNodes || []))
+      .then((elements) => {
+        const games = [];
+        let date = null;
+        for (const element of elements) {
+          const e: any = element;
+          if (element.nodeType === NodeType.ELEMENT_NODE) {
+            if (e.localName === 'thead') {
+              date = e.querySelector('tr th')?.innerHTML || date;
+              date = date.split(' ');
+              date.shift();
+              date[1] = String(months.indexOf(date[1])).padStart(2, '0');
+              date = date.reverse();
+            } else if (e.localName === 'tr') {
+              games.push({
+                homeTeamName: e.querySelector('.lm3 .lm3_eq1')?.innerText,
+                awayTeamName: e.querySelector('.lm3 .lm3_eq2')?.innerText,
+                homeTeamScore: Number(
+                  e.querySelector('.lm3 .lm3_score')?.innerText.split(' - ')[0]
+                ),
+                awayTeamScore: Number(
+                  e.querySelector('.lm3 .lm3_score')?.innerText.split(' - ')[1]
+                ),
+                externalId: Number(e.getAttribute('data-matchId')),
+                date: new Date(
+                  `${date.join(' ')} ${e.querySelector('.lm1')?.innerText}`
+                ),
+              });
+            }
+          }
+        }
+        return games;
+      })
+      .catch((err) => err);
   }
 }

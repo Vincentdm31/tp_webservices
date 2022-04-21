@@ -1,3 +1,4 @@
+import { MatchService } from './match.service';
 import { MatchModule } from './match.module';
 import { INestApplication } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
@@ -10,6 +11,7 @@ import { MatchDocument, MatchEntity } from './match.entity';
 describe('Matchs', () => {
   let app: INestApplication;
   let mongoMemoryServer: MongoMemoryServer;
+  let service: MatchService;
   const entityId = '62333116e607ce465a4a1464';
   const updateID = '62333116e607ce465a4a1467';
 
@@ -61,6 +63,7 @@ describe('Matchs', () => {
     for (const entity of entities) {
       await model.create(entity);
     }
+    service = moduleRef.get<MatchService>(MatchService);
 
     app = moduleRef.createNestApplication();
     await app.init();
@@ -315,11 +318,35 @@ describe('Matchs', () => {
 
     //
     it('should fetch match', (done) => {
-      request(app.getHttpServer())
-        .get(`/matchs/refresh/fetch`)
-        .then((res) => {
-          expect(res.status).toBe(200);
-          expect(res).toBeDefined();
+      service
+        .TESTgetLastDates()
+        .then((date) => {
+          console.log('date', date);
+          expect(date.length).toBe(7);
+          expect(date.split('-')[0]).toBe('2022');
+          expect(Number(date.split('-')[0].length)).toBe(4);
+          expect(Number(date.split('-')[1].length)).toBe(2);
+          expect(date).toMatch(/[0-9]{4}-[0-9]{2}/);
+          return date;
+        })
+        .then((date) =>
+          service.TESTfetchMatchs(date).then((matchs) => {
+            expect(matchs[0].homeTeamName).toBeTruthy();
+            expect(typeof matchs[0].homeTeamName).toBe('string');
+            expect(typeof matchs[0].awayTeamName).toBe('string');
+            expect(typeof matchs[0].homeTeamScore).toBe('number');
+            expect(typeof matchs[0].awayTeamScore).toBe('number');
+            return matchs;
+          })
+        )
+        .then((matchs) => {
+          matchs.map((match) => {
+            const result = service.insertGame(match);
+
+            result.then((e) => {
+              expect(e).toBeTruthy();
+            });
+          });
           done();
         });
     });
