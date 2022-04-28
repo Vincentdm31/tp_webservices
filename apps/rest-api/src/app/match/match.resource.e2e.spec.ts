@@ -186,15 +186,15 @@ describe('Matchs', () => {
           done();
         });
     });
-    it('fetch matches', () => {
-      request(app.getHttpServer())
-        .get(`/matchs/refresh/fetch`)
-        .then((response) => {
-          expect(response).toBeDefined();
-          expect(response.status).toBe(200);
-          expect(response.body).toBe('done');
-        });
-    });
+    // it('fetch matches', () => {
+    //   request(app.getHttpServer())
+    //     .get(`/matchs/refresh/fetch`)
+    //     .then((response) => {
+    //       expect(response).toBeDefined();
+    //       expect(response.status).toBe(200);
+    //       expect(response.body).toBe('done');
+    //     });
+    // });
   });
 
   describe('DELETE /matchs', () => {
