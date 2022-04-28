@@ -1,11 +1,10 @@
 import { Module, ValidationPipe } from '@nestjs/common';
-import { APP_FILTER, APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
-import { MongooseModule } from '@nestjs/mongoose';
+import { APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
 import { winstonConfig } from './common/logging.config';
 import { EquipeModule } from './equipe/equipe.module';
 import { MatchModule } from './match/match.module';
 import { WinstonModule } from 'nest-winston';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ConfigModule } from '@nestjs/config';
 import { environment } from '../environments/environment';
 import { ClientCacheInterceptor } from './client-cache.interceptor';
 import { ScheduleModule } from '@nestjs/schedule';

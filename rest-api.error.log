@@ -6751,3 +6751,131 @@
 {"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/refresh/fetch, GET} route","ms":"+0ms","timestamp":"2022-04-28T08:45:08.350Z"}
 {"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","ms":"+0ms","timestamp":"2022-04-28T08:45:08.359Z"}
 {"level":"\u001b[32minfo\u001b[39m","message":"🚀 Application is running on: http://localhost:3333/api","ms":"+0ms","timestamp":"2022-04-28T08:45:08.365Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"EquipeController {/api/equipes}:","ms":"+1ms","timestamp":"2022-04-28T09:38:28.102Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:38:28.105Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, GET} route","ms":"+1ms","timestamp":"2022-04-28T09:38:28.107Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:38:28.108Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PATCH} route","ms":"+0ms","timestamp":"2022-04-28T09:38:28.110Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:38:28.111Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, DELETE} route","ms":"+0ms","timestamp":"2022-04-28T09:38:28.112Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"MatchController {/api/matchs}:","ms":"+0ms","timestamp":"2022-04-28T09:38:28.113Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:38:28.114Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:38:28.115Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, GET} route","ms":"+1ms","timestamp":"2022-04-28T09:38:28.116Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PATCH} route","ms":"+0ms","timestamp":"2022-04-28T09:38:28.117Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PUT} route","ms":"+1ms","timestamp":"2022-04-28T09:38:28.119Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, DELETE} route","ms":"+1ms","timestamp":"2022-04-28T09:38:28.120Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/refresh/fetch, GET} route","ms":"+1ms","timestamp":"2022-04-28T09:38:28.121Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"EquipeController {/api/equipes}:","ms":"+1ms","timestamp":"2022-04-28T09:39:21.900Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:39:21.903Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:39:21.904Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:39:21.905Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PATCH} route","ms":"+0ms","timestamp":"2022-04-28T09:39:21.906Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:39:21.907Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, DELETE} route","ms":"+0ms","timestamp":"2022-04-28T09:39:21.908Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"MatchController {/api/matchs}:","ms":"+0ms","timestamp":"2022-04-28T09:39:21.909Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:39:21.910Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:39:21.910Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:39:21.911Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PATCH} route","ms":"+0ms","timestamp":"2022-04-28T09:39:21.912Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:39:21.913Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, DELETE} route","ms":"+0ms","timestamp":"2022-04-28T09:39:21.913Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/refresh/fetch, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:39:21.914Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"EquipeController {/api/equipes}:","ms":"+1ms","timestamp":"2022-04-28T09:41:30.462Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:41:30.467Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:41:30.470Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:41:30.472Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PATCH} route","ms":"+0ms","timestamp":"2022-04-28T09:41:30.473Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:41:30.475Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, DELETE} route","ms":"+0ms","timestamp":"2022-04-28T09:41:30.477Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"MatchController {/api/matchs}:","ms":"+0ms","timestamp":"2022-04-28T09:41:30.478Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:41:30.479Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:41:30.481Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:41:30.482Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PATCH} route","ms":"+1ms","timestamp":"2022-04-28T09:41:30.484Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:41:30.484Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, DELETE} route","ms":"+0ms","timestamp":"2022-04-28T09:41:30.485Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/refresh/fetch, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:41:30.486Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"EquipeController {/api/equipes}:","ms":"+1ms","timestamp":"2022-04-28T09:53:25.660Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:53:25.665Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:53:25.668Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, GET} route","ms":"+1ms","timestamp":"2022-04-28T09:53:25.670Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PATCH} route","ms":"+0ms","timestamp":"2022-04-28T09:53:25.671Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:53:25.673Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, DELETE} route","ms":"+0ms","timestamp":"2022-04-28T09:53:25.674Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"MatchController {/api/matchs}:","ms":"+0ms","timestamp":"2022-04-28T09:53:25.675Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:53:25.677Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:53:25.679Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:53:25.680Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PATCH} route","ms":"+0ms","timestamp":"2022-04-28T09:53:25.681Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:53:25.683Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, DELETE} route","ms":"+0ms","timestamp":"2022-04-28T09:53:25.684Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/refresh/fetch, GET} route","ms":"+1ms","timestamp":"2022-04-28T09:53:25.686Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"EquipeController {/api/equipes}:","ms":"+1ms","timestamp":"2022-04-28T09:53:58.976Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:53:58.980Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:53:58.981Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:53:58.982Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PATCH} route","ms":"+0ms","timestamp":"2022-04-28T09:53:58.983Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:53:58.984Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, DELETE} route","ms":"+0ms","timestamp":"2022-04-28T09:53:58.986Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"MatchController {/api/matchs}:","ms":"+0ms","timestamp":"2022-04-28T09:53:58.987Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:53:58.988Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:53:58.989Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:53:58.990Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PATCH} route","ms":"+0ms","timestamp":"2022-04-28T09:53:58.991Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:53:58.992Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, DELETE} route","ms":"+0ms","timestamp":"2022-04-28T09:53:58.993Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/refresh/fetch, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:53:58.994Z"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","ms":"+0ms","timestamp":"2022-04-28T09:53:59.003Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"🚀 Application is running on: http://localhost:3333/api","ms":"+0ms","timestamp":"2022-04-28T09:53:59.011Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"EquipeController {/api/equipes}:","ms":"+1ms","timestamp":"2022-04-28T09:54:03.196Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:54:03.201Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:03.202Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:03.204Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PATCH} route","ms":"+0ms","timestamp":"2022-04-28T09:54:03.206Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:54:03.208Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, DELETE} route","ms":"+0ms","timestamp":"2022-04-28T09:54:03.210Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"MatchController {/api/matchs}:","ms":"+1ms","timestamp":"2022-04-28T09:54:03.212Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:54:03.213Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:03.214Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:03.215Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PATCH} route","ms":"+0ms","timestamp":"2022-04-28T09:54:03.217Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:54:03.218Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, DELETE} route","ms":"+1ms","timestamp":"2022-04-28T09:54:03.220Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/refresh/fetch, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:03.221Z"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","ms":"+0ms","timestamp":"2022-04-28T09:54:03.231Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"🚀 Application is running on: http://localhost:3333/api","ms":"+0ms","timestamp":"2022-04-28T09:54:03.240Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"EquipeController {/api/equipes}:","ms":"+1ms","timestamp":"2022-04-28T09:54:06.227Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:54:06.231Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:06.232Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:06.233Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PATCH} route","ms":"+1ms","timestamp":"2022-04-28T09:54:06.236Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:54:06.237Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, DELETE} route","ms":"+1ms","timestamp":"2022-04-28T09:54:06.239Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"MatchController {/api/matchs}:","ms":"+0ms","timestamp":"2022-04-28T09:54:06.239Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, POST} route","ms":"+1ms","timestamp":"2022-04-28T09:54:06.241Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:06.242Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:06.243Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PATCH} route","ms":"+1ms","timestamp":"2022-04-28T09:54:06.245Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:54:06.246Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, DELETE} route","ms":"+0ms","timestamp":"2022-04-28T09:54:06.247Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/refresh/fetch, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:06.248Z"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","ms":"+0ms","timestamp":"2022-04-28T09:54:06.256Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"🚀 Application is running on: http://localhost:3333/api","ms":"+0ms","timestamp":"2022-04-28T09:54:06.264Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"EquipeController {/api/equipes}:","ms":"+2ms","timestamp":"2022-04-28T09:54:10.013Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, POST} route","ms":"+1ms","timestamp":"2022-04-28T09:54:10.020Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:10.021Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:10.023Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PATCH} route","ms":"+0ms","timestamp":"2022-04-28T09:54:10.025Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:54:10.027Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/equipes/:id, DELETE} route","ms":"+1ms","timestamp":"2022-04-28T09:54:10.029Z"}
+{"context":"RoutesResolver","level":"\u001b[32minfo\u001b[39m","message":"MatchController {/api/matchs}:","ms":"+0ms","timestamp":"2022-04-28T09:54:10.030Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, POST} route","ms":"+0ms","timestamp":"2022-04-28T09:54:10.031Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:10.033Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:10.034Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PATCH} route","ms":"+0ms","timestamp":"2022-04-28T09:54:10.035Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, PUT} route","ms":"+0ms","timestamp":"2022-04-28T09:54:10.037Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/:id, DELETE} route","ms":"+0ms","timestamp":"2022-04-28T09:54:10.038Z"}
+{"context":"RouterExplorer","level":"\u001b[32minfo\u001b[39m","message":"Mapped {/api/matchs/refresh/fetch, GET} route","ms":"+0ms","timestamp":"2022-04-28T09:54:10.039Z"}
+{"context":"NestApplication","level":"\u001b[32minfo\u001b[39m","message":"Nest application successfully started","ms":"+0ms","timestamp":"2022-04-28T09:54:10.054Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"🚀 Application is running on: http://localhost:3333/api","ms":"+0ms","timestamp":"2022-04-28T09:54:10.065Z"}
