@@ -170,6 +170,7 @@ export class MatchService {
   }
 
   // @Cron('30 3 * * 1,3,5')
+  @Cron('10 * * * *')
   async getLastDates(date = '', count = 0, total = 10): Promise<any> {
     if (count >= total) {
       return count;
