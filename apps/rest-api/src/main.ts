@@ -32,7 +32,7 @@ async function bootstrap() {
     })
   );
   const config = new DocumentBuilder()
-    .setTitle('NestVins')
+    .setTitle('Vins')
     .setDescription('nest')
     .setVersion('1.0')
     .build();
