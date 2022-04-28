@@ -11,14 +11,7 @@ import {
   PartialType,
   PickType,
 } from '@nestjs/mapped-types';
-import {
-  IsDateString,
-  IsInt,
-  IsOptional,
-  IsString,
-  Min,
-  MinLength,
-} from 'class-validator';
+import { IsString } from 'class-validator';
 
 export class EquipeValidationDto implements EquipeDto {
   @IsObjectId() id: string;

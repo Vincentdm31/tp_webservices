@@ -1,24 +1,16 @@
 import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
-import { EquipeEntity, EquipeSchema } from './equipe.entity';
-import { EquipeService } from './equipe.service';
 import { EquipeController } from './equipe.controller';
 import { CacheModule } from '@nestjs/common';
+import { ApiTeamServiceModule } from '@rendu-tp0/api/team-service';
 
 @Module({
   imports: [
-      CacheModule.register({
-        ttl: 60,
-        max: 10
-      }),
-    MongooseModule.forFeature([
-      {
-        name: EquipeEntity.name,
-        schema: EquipeSchema,
-      },
-    ]),
+    CacheModule.register({
+      ttl: 60,
+      max: 10,
+    }),
+    ApiTeamServiceModule,
   ],
   controllers: [EquipeController],
-  providers: [EquipeService],
 })
 export class EquipeModule {}

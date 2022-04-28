@@ -15,7 +15,7 @@ import {
   equipeResetDtoToEntity,
   equipeUpdateDtoToEntity,
 } from './equipe.mapper';
-import { PaginationParams } from './equipe.controller';
+import { PaginationParams } from '@rendu-tp0/api/database';
 
 @Injectable()
 export class EquipeService {

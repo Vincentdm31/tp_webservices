@@ -1,9 +1,7 @@
-import { ApiException } from '@rendu-tp0/api/core/error';
 import { EquipeDto } from '@rendu-tp0/common/resource/equipe';
 import { getModelToken } from '@nestjs/mongoose';
-import { MockFactory, Test, TestingModule } from '@nestjs/testing';
-import { Error, model, Model } from 'mongoose';
-import { Observable } from 'rxjs';
+import { Test, TestingModule } from '@nestjs/testing';
+import { model, Model } from 'mongoose';
 import {
   EquipeDocument,
   EquipeEntity,

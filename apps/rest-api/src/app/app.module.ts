@@ -9,16 +9,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { environment } from '../environments/environment';
 import { ClientCacheInterceptor } from './client-cache.interceptor';
 import { ScheduleModule } from '@nestjs/schedule';
-
-export const mongoDbUri = function (configService: ConfigService) {
-  const username = configService.get('DATABASE_USERNAME');
-  const password = configService.get('DATABASE_PASSWORD');
-  const host = configService.get('DATABASE_HOST');
-  const databaseName = configService.get('DATABASE_NAME');
-  return {
-    uri: `mongodb+srv://${username}:${password}@${host}/${databaseName}`,
-  };
-};
+import { ApiDatabaseModule } from '@rendu-tp0/api/database';
 
 @Module({
   imports: [
@@ -26,11 +17,7 @@ export const mongoDbUri = function (configService: ConfigService) {
       envFilePath: environment.filePath,
     }),
     ScheduleModule.forRoot(),
-    MongooseModule.forRootAsync({
-      imports: [ConfigModule],
-      useFactory: mongoDbUri,
-      inject: [ConfigService],
-    }),
+    ApiDatabaseModule,
     WinstonModule.forRoot(winstonConfig),
     EquipeModule,
     MatchModule,

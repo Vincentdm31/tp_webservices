@@ -19,9 +19,12 @@
       "@rendu-tp0/api/core/pagination": [
         "libs/api/core/pagination/src/index.ts"
       ],
+      "@rendu-tp0/api/database": ["libs/api/database/src/index.ts"],
+      "@rendu-tp0/api/match-service": ["libs/api/match-service/src/index.ts"],
       "@rendu-tp0/api/repository/error": [
         "libs/api/repository/error/src/index.ts"
       ],
+      "@rendu-tp0/api/team-service": ["libs/api/team-service/src/index.ts"],
       "@rendu-tp0/api/validation/id": ["libs/api/validation/id/src/index.ts"],
       "@rendu-tp0/common/resource/core": [
         "libs/common/resource/core/src/index.ts"

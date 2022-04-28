@@ -47,6 +47,8 @@
       },
       "tags": []
     },
+    "api-database": "libs/api/database",
+    "api-match-service": "libs/api/match-service",
     "api-repository-error": {
       "root": "libs/api/repository/error",
       "sourceRoot": "libs/api/repository/error/src",
@@ -70,6 +72,7 @@
       },
       "tags": []
     },
+    "api-team-service": "libs/api/team-service",
     "api-validation-id": "libs/api/validation/id",
     "common-resource-core": {
       "root": "libs/common/resource/core",
@@ -140,7 +143,6 @@
       },
       "tags": []
     },
-
     "common-resource-match": {
       "root": "libs/common/resource/match",
       "sourceRoot": "libs/common/resource/match/src",

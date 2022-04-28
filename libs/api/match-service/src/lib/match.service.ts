@@ -15,10 +15,11 @@ import {
   matchResetDtoToEntity,
   matchUpdateDtoToEntity,
 } from './match.mapper';
-import { FilterParams, PaginationParams } from './match.controller';
+
 import { Cron, Timeout } from '@nestjs/schedule';
 import axios from 'axios';
 import { NodeType, parse } from 'node-html-parser';
+import { FilterParams, PaginationParams } from '@rendu-tp0/api/database';
 
 @Injectable()
 export class MatchService {

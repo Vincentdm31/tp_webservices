@@ -1,4 +1,4 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { Logger } from '@nestjs/common';
 import {
   EquipeCreateDto,
   EquipeDto,
@@ -34,7 +34,9 @@ export const equipeCreateDtoToEntity = (dto: EquipeCreateDto): EquipeEntity => {
   };
 };
 
-export const equipeUpdateDtoToEntity = (dto: EquipeUpdateDto): EquipeEntityWithId => {
+export const equipeUpdateDtoToEntity = (
+  dto: EquipeUpdateDto
+): EquipeEntityWithId => {
   logMapper.debug('equipeUpdateDtoToEntity is find');
   logMapper.log('equipeUpdateDtoToEntity is find');
   logMapper.warn('equipeUpdateDtoToEntity is find');
@@ -45,7 +47,9 @@ export const equipeUpdateDtoToEntity = (dto: EquipeUpdateDto): EquipeEntityWithI
   };
 };
 
-export const equipeResetDtoToEntity = (dto: EquipeResetDto): EquipeEntityWithId => {
+export const equipeResetDtoToEntity = (
+  dto: EquipeResetDto
+): EquipeEntityWithId => {
   logMapper.debug('equipeResetDtoToEntity is find');
   logMapper.log('equipeResetDtoToEntity is find');
   logMapper.warn('equipeResetDtoToEntity is find');

@@ -1,20 +1,19 @@
-import { ApiException } from '@rendu-tp0/api/core/error';
 import { EquipeDto } from '@rendu-tp0/common/resource/equipe';
 import { getModelToken } from '@nestjs/mongoose';
-import { MockFactory, Test, TestingModule } from '@nestjs/testing';
-import { Error, model, Model } from 'mongoose';
-import { Observable } from 'rxjs';
+import { Test, TestingModule } from '@nestjs/testing';
+import { model, Model } from 'mongoose';
+
+import * as mockingoose from 'mockingoose';
 import {
   EquipeDocument,
+  equipeDocumentToDto,
   EquipeEntity,
   EquipeEntityWithId,
   EquipeSchema,
-} from './equipe.entity';
-import { EquipeService } from './equipe.service';
-import * as mockingoose from 'mockingoose';
-import { equipeDocumentToDto } from './equipe.mapper';
+  EquipeService,
+} from '@rendu-tp0/api/team-service';
 
-jest.mock('./equipe.mapper');
+jest.mock('../../../../../libs/api/team-service/src/lib/equipe.mapper');
 
 describe('EquipeService', () => {
   let service: EquipeService;

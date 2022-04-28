@@ -35,15 +35,23 @@ import {
   ApiEquipeUpdateDto,
   equipeExample,
 } from './equipe.documentation';
-import { EquipeService } from './equipe.service';
 import {
   EquipeCreateValidationDto,
   EquipeResetValidationDto,
   EquipeUpdateValidationDto,
 } from './equipe.validation';
-import {IsInt, IsOptional, IsString, Max, MaxLength, Min, MinLength} from 'class-validator';
+import {
+  IsInt,
+  IsOptional,
+  IsString,
+  Max,
+  MaxLength,
+  Min,
+  MinLength,
+} from 'class-validator';
 import { Type as TypeTransformer } from 'class-transformer';
 import { CacheInterceptor, UseInterceptors } from '@nestjs/common';
+import { EquipeService } from '@rendu-tp0/api/team-service';
 
 export interface PaginationParams {
   page?: number;
@@ -86,10 +94,15 @@ export class EquipeController {
   @ApiCreatedResponse({ type: ApiEquipeDto })
   @ApiBadRequestResponse()
   @UseInterceptors(CacheInterceptor)
-  create(@Body(new ValidationPipe({
-    transform: true,
-    expectedType: PostParamsValidation,
-  })) dto: EquipeCreateValidationDto): Promise<EquipeDto> {
+  create(
+    @Body(
+      new ValidationPipe({
+        transform: true,
+        expectedType: PostParamsValidation,
+      })
+    )
+    dto: EquipeCreateValidationDto
+  ): Promise<EquipeDto> {
     return this.equipeService.create(dto);
   }
 
@@ -129,10 +142,13 @@ export class EquipeController {
   @UseInterceptors(CacheInterceptor)
   update(
     @Param('id', IsObjectIdPipe) id: string,
-    @Body(new ValidationPipe({
-      transform: true,
-      expectedType: PostParamsValidation,
-    })) dto: EquipeUpdateValidationDto
+    @Body(
+      new ValidationPipe({
+        transform: true,
+        expectedType: PostParamsValidation,
+      })
+    )
+    dto: EquipeUpdateValidationDto
   ): Promise<EquipeDto> {
     return this.equipeService.update({ ...dto, id });
   }
@@ -162,4 +178,3 @@ export class EquipeController {
     return this.equipeService.remove(id);
   }
 }
-

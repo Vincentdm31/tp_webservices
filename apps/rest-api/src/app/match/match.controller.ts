@@ -32,14 +32,12 @@ import {
   ApiMatchUpdateDto,
   matchExample,
 } from './match.documentation';
-import { MatchService } from './match.service';
 import {
   MatchCreateValidationDto,
   MatchResetValidationDto,
   MatchUpdateValidationDto,
 } from './match.validation';
 import {
-  IsDate,
   IsInt,
   IsNumber,
   IsOptional,
@@ -51,11 +49,9 @@ import {
 } from 'class-validator';
 import { Type as TypeTransformer } from 'class-transformer';
 import { CacheInterceptor, UseInterceptors } from '@nestjs/common';
-
-export interface PaginationParams {
-  page?: number;
-  size?: number;
-}
+import { MatchService } from '@rendu-tp0/api/match-service';
+import { PaginationParams } from '../equipe/equipe.controller';
+import { FilterParams } from '@rendu-tp0/api/database';
 
 export class PaginationParamsValidation implements PaginationParams {
   @IsOptional()
@@ -107,13 +103,6 @@ export class PostParamsValidation implements PostParams {
   @Min(0)
   @Max(100)
   awayTeamScore?: number;
-}
-
-export interface FilterParams {
-  date?: string;
-  homeTeamName?: string;
-  awayTeamName?: string;
-  team?: string;
 }
 
 export class FilterParamsValidation implements FilterParams {

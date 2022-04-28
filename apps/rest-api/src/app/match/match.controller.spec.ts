@@ -1,20 +1,18 @@
-import { ApiException } from '@rendu-tp0/api/core/error';
-import { MatchDto } from '@rendu-tp0/common/resource/match';
-import { getModelToken } from '@nestjs/mongoose';
-import { MockFactory, Test, TestingModule } from '@nestjs/testing';
-import { Error, model, Model } from 'mongoose';
-import { Observable } from 'rxjs';
 import {
   MatchDocument,
+  matchDocumentToDto,
   MatchEntity,
   MatchEntityWithId,
   MatchSchema,
-} from './match.entity';
-import { MatchService } from './match.service';
-import * as mockingoose from 'mockingoose';
-import { matchDocumentToDto } from './match.mapper';
+  MatchService,
+} from '@rendu-tp0/api/match-service';
+import { MatchDto } from '@rendu-tp0/common/resource/match';
+import { getModelToken } from '@nestjs/mongoose';
+import { Test, TestingModule } from '@nestjs/testing';
+import { model, Model } from 'mongoose';
 
-jest.mock('./match.mapper');
+import * as mockingoose from 'mockingoose';
+jest.mock('../../../../../libs/api/match-service/src/lib/match.mapper');
 
 describe('MatchService', () => {
   let service: MatchService;

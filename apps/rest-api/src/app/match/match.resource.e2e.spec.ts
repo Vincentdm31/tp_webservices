@@ -1,4 +1,8 @@
-import { MatchService } from './match.service';
+import {
+  MatchDocument,
+  MatchEntity,
+  MatchService,
+} from '@rendu-tp0/api/match-service';
 import { MatchModule } from './match.module';
 import { INestApplication } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
@@ -6,7 +10,6 @@ import * as request from 'supertest';
 import { Model } from 'mongoose';
 import { getModelToken, MongooseModule } from '@nestjs/mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
-import { MatchDocument, MatchEntity } from './match.entity';
 
 describe('Matchs', () => {
   let app: INestApplication;

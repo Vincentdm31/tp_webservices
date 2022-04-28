@@ -8,5 +8,9 @@
     "target": "es2015"
   },
   "exclude": ["**/*.spec.ts", "**/*.test.ts"],
-  "include": ["**/*.ts"]
+  "include": [
+    "**/*.ts",
+    "../../libs/api/match-service/src/lib/match.service.ts",
+    "../../libs/api/team-service/src/lib/equipe.service.ts"
+  ]
 }

@@ -5,7 +5,7 @@ import * as request from 'supertest';
 import { Model } from 'mongoose';
 import { getModelToken, MongooseModule } from '@nestjs/mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
-import { EquipeDocument, EquipeEntity } from './equipe.entity';
+import { EquipeDocument, EquipeEntity } from '@rendu-tp0/api/team-service';
 
 describe('Equipes', () => {
   let app: INestApplication;
